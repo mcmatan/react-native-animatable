@@ -23,7 +23,7 @@ function makeZoomInTranslation(translationType, pivotPoint) {
 
 export const zoomIn = {
   from: {
-    opacity: 0,
+    opacity: 1,
     scale: 0.3,
   },
   0.5: {

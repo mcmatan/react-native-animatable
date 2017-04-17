@@ -5,7 +5,7 @@ function makeZoomInTranslation(translationType, pivotPoint) {
   return {
     easing: Easing.bezier(0.175, 0.885, 0.320, 1),
     0: {
-      opacity: 0,
+      opacity: 1,
       scale: 0.1,
       [translationType]: modifier * -1000,
     },
@@ -23,8 +23,11 @@ function makeZoomInTranslation(translationType, pivotPoint) {
 
 export const zoomIn = {
   from: {
-    opacity: 1,
+    opacity: 0,
     scale: 0.3,
+  },
+  0.1: {
+    opacity: 1,
   },
   0.5: {
     opacity: 1,
@@ -34,6 +37,7 @@ export const zoomIn = {
     scale: 1,
   },
 };
+
 
 export const zoomInDown = makeZoomInTranslation('translateY', 60);
 
